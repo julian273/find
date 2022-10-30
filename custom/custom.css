@@ -1,0 +1,131 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.encabezado {
+  background: #7303c0;
+  background: linear-gradient(to left, #7303c0, #03001e);
+}
+.encabezado .encabezado-buscar {
+  padding: 10px;
+}
+
+#btn-menu {
+  display: none;
+}
+
+.imagen-menu {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.container-menu {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cont-menu {
+  width: 100%;
+  max-width: 250px;
+  background: #03001e;
+  background: linear-gradient(to left, #7303c0, #03001e);
+  height: 213vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+
+.cont-menu nav {
+  transform: translateY(15%);
+}
+
+.cont-menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+  border-left: 5px solid #d427da;
+  background: #1f1f1f;
+}
+
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contenido {
+  padding: 15px;
+  display: flex;
+  row-gap: 15px;
+}
+.contenido .contenido-cartas {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.2rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carta {
+  margin: 15px;
+  display: block;
+  justify-content: center;
+  border-radius: 7px;
+  box-shadow: 5px 5px 17px #524f54, -5px -5px 17px #ffffff;
+}
+.carta .carta-contenido-imagen {
+  display: flex;
+  justify-content: center;
+}
+.carta .carta-contenido-imagen .carta-imagen {
+  width: 16rem;
+}
+.carta .carta-cuerpo .carta-titulo {
+  display: flex;
+  justify-content: center;
+}
+.carta .carta-cuerpo .carta-texto {
+  display: flex;
+  justify-content: center;
+}
+.carta .carta-cuerpo .carta-boton {
+  display: flex;
+  justify-content: center;
+}
+.carta .carta-cuerpo .carta-boton .btn {
+  border: #7303c0;
+  background: #03001e;
+  background: linear-gradient(to left, #7303c0, #03001e);
+  border-radius: 7px;
+  box-shadow: 5px 5px 17px #524f54, -5px -5px 17px #ffffff;
+  margin-bottom: 15px;
+}/*# sourceMappingURL=custom.css.map */

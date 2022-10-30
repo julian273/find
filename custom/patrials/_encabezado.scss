@@ -1,0 +1,82 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.encabezado {
+    background: #7303c0;
+    background: -webkit-linear-gradient(to left,#7303c0, #03001e);
+    background: linear-gradient(to left, #7303c0, #03001e);
+
+    .encabezado-buscar {
+        padding: 10px;
+    }
+}
+
+#btn-menu {
+    display: none; // sacar el check del menu
+}
+
+.imagen-menu {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.container-menu {
+    position: absolute; // posicion absoluda del menu
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked~.container-menu {
+    opacity: 1; //opacidad del despliege
+    visibility: visible; // visivilidad del menu 
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 250px; // ancho del menu desplegable
+    background: #03001e; //fondo cuando esta desplegado
+    background: -webkit-linear-gradient(to left,   #7303c0, #03001e); //fondo cuando esta desplegado
+    background: linear-gradient(to left,   #7303c0, #03001e); //fondo cuando esta desplegado
+    height: 213vh; // largo del menu desplegable
+    position: relative;
+    transition: all 500ms ease; //movimiento de salida menu desplegable
+    transform: translateX(-100%); // movimiento de entrada menu desplegable
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+}
+
+.cont-menu nav a {
+    display: block; // poner en horizontal los link de menu
+    text-decoration: none; // sacar decoracion de menu
+    padding: 20px; // espacio entre links de menu
+    color: #c7c7c7; // color de fuente de menu
+    border-left: 5px solid transparent;
+    transition: all 400ms ease; // efecto de transicion entre los links
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #d427da; // borde de menu
+    background: #1f1f1f; // fondo en la transicion del links de menu
+}
+
+.cont-menu label {
+    position: absolute; // posicion absoluta de X para cerrar menu
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
