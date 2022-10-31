@@ -3,6 +3,7 @@
     display: flex;
     row-gap: 15px;
     .contenido-cartas{
+        padding: 15px;
         display: grid;
         grid-auto-flow: column;
         scroll-behavior: auto;
@@ -11,5 +12,16 @@
         overscroll-behavior-x: contain;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
+    }
+    .contenido-cartas::-webkit-scrollbar{
+        width: 8px;
+        height: 10px;
+    }
+    .contenido-cartas::-webkit-scrollbar-thumb{
+        background: #7303c0;
+        background: -webkit-linear-gradient(to left,#7303c0, #03001e);
+        background: linear-gradient(to left, #7303c0, #03001e);
+        border-radius: 5px;
+
     }
 }

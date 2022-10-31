@@ -22,13 +22,25 @@
 
 .container-menu {
   position: absolute;
-  width: 100%;
+  width: 100rem;
   height: 100vh;
   top: 0;
   left: 0;
   transition: all 500ms ease;
   opacity: 0;
   visibility: hidden;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.2rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.container-menu::-webkit-scrollbar {
+  display: none;
 }
 
 #btn-menu:checked ~ .container-menu {
@@ -84,6 +96,7 @@
   row-gap: 15px;
 }
 .contenido .contenido-cartas {
+  padding: 15px;
   display: grid;
   grid-auto-flow: column;
   scroll-behavior: auto;
@@ -93,6 +106,15 @@
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   scrollbar-width: none;
+}
+.contenido .contenido-cartas::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+.contenido .contenido-cartas::-webkit-scrollbar-thumb {
+  background: #7303c0;
+  background: linear-gradient(to left, #7303c0, #03001e);
+  border-radius: 5px;
 }
 
 .carta {
