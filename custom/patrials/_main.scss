@@ -13,15 +13,14 @@
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
     }
+
     .contenido-cartas::-webkit-scrollbar{
-        width: 8px;
         height: 10px;
     }
-    .contenido-cartas::-webkit-scrollbar-thumb{
+    .contenido-cartas::-webkit-scrollbar-thumb {
+        border-radius: 5px;
         background: #7303c0;
         background: -webkit-linear-gradient(to left,#7303c0, #03001e);
         background: linear-gradient(to left, #7303c0, #03001e);
-        border-radius: 5px;
-
     }
 }
